@@ -24,14 +24,14 @@
 - **Pre-training Stage**
 
     ```bash
-    python step/run.py --cfg='model/MAEST_$DATASET.py' --gpus '0'
+    python model/run.py --cfg='model/MAEST_$DATASET.py' --gpus '0'
     ```
   Replace `$DATASET_NAME` with with your dataset.
 - **Forecasting Stage** 
-    After pre-training TSFormer, move your pre-trained best checkpoint to `MAEST_ckpt/` and rename `MAEST_$DATASET_NAME.pt`.
+    After pre-training MAEST, move your pre-trained best checkpoint to `MAEST_ckpt/` and rename `MAEST_$DATASET_NAME.pt`.
     Then
     ```bash
-      python step/run.py --cfg='model/enhance_$DATASET.py' --gpus='0'
+      python model/run.py --cfg='model/enhance_$DATASET.py' --gpus='0'
     ```
     Replace `$DATASET_NAME` with with your dataset.
 
